@@ -34,19 +34,12 @@
 - [Acknowledgments](#acknowledgments)
 
 ## 🧐 Problem Statement <a name = "problem_statement"></a>
+This Node.js console application is designed to simplify the task of working with large Excel files. It automates the process of:
 
-It is useful to design and follow a specific format when writing a problem statement. While there are several options
-for doing this, the following is a simple and straightforward template often used in Business Analysis to maintain
-focus on defining the problem.
+* **Grouping data:** Identifying and grouping data within a specified column.
+* **File splitting:** Exporting each group to a new Excel or CSV file. 
 
-- IDEAL: This section is used to describe the desired or “to be” state of the process or product. At large, this section
-  should illustrate what the expected environment would look like once the solution is implemented.
-- REALITY: This section is used to describe the current or “as is” state of the process or product.
-- CONSEQUENCES: This section is used to describe the impacts on the business if the problem is not fixed or improved upon.
-  This includes costs associated with loss of money, time, productivity, competitive advantage, and so forth.
-
-Following this format will result in a workable document that can be used to understand the problem and elicit
-requirements that will lead to a winning solution.
+By breaking down large, complex datasets into smaller, more focused files, this application enhances data organization, facilitates analysis, and improves overall productivity.
 
 ## 💡 Idea / Solution <a name = "idea"></a>
 
