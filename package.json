@@ -1,0 +1,32 @@
+{
+  "name": "large_sheet_split",
+  "version": "1.0.0",
+  "description": "The selected code is a Node.js script that reads an Excel file, groups the data by a specific column ('Fatura sıra'), and then splits the grouped data into smaller chunks, each with a maximum size of 80 rows. Each chunk is then written to a separate CSV file. Here's a breakdown of the selected code: 1. Importing necessary modules: - 'readline': for reading user input. - 'os': for accessing operating system-specific functionality. - 'path': for manipulating file paths. - 'csv-writer': for creating CSV files. - 'lodash': for utility functions. - 'fs': for file system operations. - 'xlsx': for reading and writing Excel files. 2. Defining constants: - 'homeDir': the path to the user's Downloads folder. 3. Reading user input for the Excel file path: - Using 'readline.question' to prompt the user to drag and drop an Excel file. - Logging a message indicating the start of the split process. 4. Extracting file information: - Determining the file extension. - Extracting the file name without the extension. - Creating a folder path by joining the user's Downloads folder with the file name. 5. Creating the output folder: - Using 'fs.mkdir' to create the output folder. 6. Reading the Excel file: - Using 'XLSX.readFile' to read the Excel file. - Extracting the first sheet's data as an array of objects using 'XLSX.utils.sheet_to_json'. - Grouping the data by the 'Fatura sıra' column using the 'groupBy' function. 7. Splitting the grouped data into chunks: - Using the 'groupAndChunk' function to split the grouped data into chunks, each with a maximum size of 80 rows. 8. Writing each chunk to a separate CSV file: - Iterating over the chunks using 'forEach'. - Creating a CSV file path by joining the output folder path with the file name and chunk index. - Writing the chunk data to a CSV file using the 'createCsv' function. 9. Defining helper functions: - 'createCsv': creates a CSV file using the 'csv-writer' module. - 'groupBy': groups an array of objects by a specified key. - 'chunkArray': splits an array into smaller chunks of a specified size. - 'groupAndChunk': groups an object of arrays by a specified key and then splits the grouped arrays into chunks. Overall, the selected code reads an Excel file, groups the data by a specific column, splits the grouped data into smaller chunks, and writes each chunk to a separate CSV file.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "pkg index.js --target node18-win-x64"
+  },
+  "author": "Yiğit Atalay <ataly08@hotmail.com> (https://www.linkedin.com/in/yigitatalay/)",
+  "license": "ISC",
+  "homepage": "https://github.com/owner/project#readme",
+  "keywords": [
+    "excel-sheet-split",
+    "large-sheet-split",
+    "node.js",
+    "excel",
+    "csv",
+    "splitting"
+  ],
+  "bugs": {
+    "url": "https://github.com/owner/project/issues",
+    "email": "ataly08@hotmail.com"
+  },
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "fs": "^0.0.1-security",
+    "lodash": "^4.17.21",
+    "path": "^0.12.7",
+    "xlsx": "^0.18.5"
+  }
+}
